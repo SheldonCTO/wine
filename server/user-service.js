@@ -7,15 +7,34 @@ let Schema = mongoose.Schema;
 
 
 let userSchema = new Schema({
-    userName: {
-      type: String,
-      unique: true
-    },
-    password: String,
-    fullName: String,
-    role: String
-  });
-  
+    
+        userName: {
+          type: String,
+          unique: true
+        },
+        storeName: String,
+        password: String,
+        fullName: String,
+        city: String,
+        noOfStreet: Number,
+        street: String,
+        phone: Number,
+        store: Boolean,
+        products: [
+          {
+            PID: Number,
+            price: Number,
+            quantity: Number
+          }
+        ],
+        order: [
+          {
+            OID: Number
+          }
+        ],
+        reward: Number,
+        role: String
+      });
 
 let User;
 

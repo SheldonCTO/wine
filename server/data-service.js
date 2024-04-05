@@ -31,7 +31,7 @@ module.exports.connect = function () {
     });
 
     db.once("open", () => {
-      Product = db.model("products", productSchema);
+      Product = db.model("spirits", productSchema);
       console.log(Product);
       resolve();
     });
